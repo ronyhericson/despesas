@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 
+import DespesaItem from '../components/DespesaItem';
+
 export default function Home(){
+    const [lista, setLista] = useState();
+
     return (
         <div class="container">
             <header>
@@ -21,7 +25,9 @@ export default function Home(){
 
             <div class="main">
                 <div class="main-grid">
-
+                    <DespesaItem />
+                    <DespesaItem />
+                    <DespesaItem />
                 </div>
                 <div class="main-total">
                     <h1>TOTAL: 10.568,00</h1>
