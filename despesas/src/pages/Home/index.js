@@ -20,7 +20,12 @@ export default () => {
             </div>
 
             <div class="main">
+                <div class="main-grid">
 
+                </div>
+                <div class="main-total">
+                    <h1>TOTAL: 10.568,00</h1>
+                </div>
             </div>
 
             <div class="footer">
