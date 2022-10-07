@@ -4,8 +4,7 @@ import './style.css';
 import DespesaItem from '../components/DespesaItem';
 
 export default function Home(){
-    const [lista, setLista] = useState();
-
+    
     return (
         <div class="container">
             <header>
