@@ -26,7 +26,8 @@ export default function Home(){
                 <div class="main-grid">
                     <DespesaItem />
                     <DespesaItem />
-                    <DespesaItem />
+                    <DespesaItem /> 
+                    <DespesaItem /> 
                 </div>
                 <div class="main-total">
                     <h1>TOTAL: 10.568,00</h1>
