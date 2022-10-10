@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './style.css';
 
 import DespesaItem from '../components/DespesaItem';
+import despesaService from '../../services/despesaSevice';
 
-export default function Home(){
-    
+
+export default function Home() {
+
+    const [listaDespesas, setListaDespesas] = useState([]);
+
+    const getDespesasAsync = useCallback(async () => {
+        //Busca todas as despesas cadastradas na base 
+        const lstDespesas = await despesaService.GetDespesas();
+
+        setListaDespesas(lstDespesas);
+    }, [setListaDespesas]);
+
+    useEffect(() => {
+        getDespesasAsync();
+    }, [getDespesasAsync]);
+
+
     return (
         <div class="container">
             <header>
@@ -24,10 +40,10 @@ export default function Home(){
 
             <div class="main">
                 <div class="main-grid">
-                    <DespesaItem />
-                    <DespesaItem />
-                    <DespesaItem /> 
-                    <DespesaItem /> 
+
+                    <DespesaItem tipo="CASA" lista={listaDespesas && (listaDespesas || [])} />
+                    <DespesaItem tipo="ESCOLA" lista={listaDespesas && (listaDespesas || [])} />
+
                 </div>
                 <div class="main-total">
                     <h1>TOTAL: 10.568,00</h1>

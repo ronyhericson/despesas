@@ -21,14 +21,20 @@
 }
 
 .itemContainer .itemContainer-main{    
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;    
     border-bottom: 1px solid #CCC;
 }
 
-.itemContainer .itemContainer-main .itemContainer-main-title{
-    margin: 10px 0;
+.itemContainer-main-itens{
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemContainer .itemContainer-main .itemContainer-main-title{    
     font-family: 'Inika', serif;
     font-size: 12px;
     font-weight: 300;
